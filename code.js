@@ -9,18 +9,18 @@ module.exports = class App {
   }
 
   run() {
+    let output
     const args = this._commandLine.args();
 
     if (args.length === 0) {
-      this._commandLine.writeOutput("Usage: run text_to_transform");
-      return;
-    }
-    if (args.length !== 1) {
-      this._commandLine.writeOutput("Too many arguments");
+      output = "Usage: run text_to_transform"
+    } else if (args.length !== 1) {
+      output = "Too many arguments"
+    } else {
+      const input = args[0];
+      output = this._rot13.transform(input);
     }
 
-    const input = args[0];
-    const output = this._rot13.transform(input);
     this._commandLine.writeOutput(output);
   }
 
