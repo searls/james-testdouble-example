@@ -1,0 +1,17 @@
+{
+  "name": "james-testdouble-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "code.js",
+  "scripts": {
+    "test": "teenytest test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ought": "0.0.6",
+    "teenytest": "^6.0.2",
+    "testdouble": "^3.15.0"
+  }
+}
